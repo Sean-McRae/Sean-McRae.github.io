@@ -1,0 +1,58 @@
+# Site settings
+title: Sean McRae Security Research
+email: contact@seanmcrae.com
+description: >-
+  Security research, vulnerability analysis, and offensive security techniques.
+baseurl: ""
+url: "https://sean-mcrae.github.io"
+github_username: Sean-McRae
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Sean McRae"
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Syntax highlighting
+highlighter: rouge

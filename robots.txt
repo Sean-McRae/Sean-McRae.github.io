@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sean-mcrae.github.io/sitemap.xml

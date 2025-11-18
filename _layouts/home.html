@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="home">
+    <section class="hero">
+        <h1 class="hero-title">Security Research & Analysis</h1>
+        <p class="hero-subtitle">
+            Exploring vulnerabilities, attack vectors, and application security.
+        </p>
+    </section>
+
+    <section class="posts-list">
+        <h2 class="section-title">Latest Research</h2>
+        {% if site.posts.size > 0 %}
+        <div class="posts-grid">
+            {% for post in site.posts %}
+            <article class="post-card">
+                <div class="post-card-header">
+                    <h3 class="post-card-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h3>
+                    <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%b %d, %Y" }}
+                    </time>
+                </div>
+                <div class="post-card-excerpt">
+                    {{ post.excerpt | strip_html | truncatewords: 50 }}
+                </div>
+                {% if post.tags %}
+                <div class="post-card-tags">
+                    {% for tag in post.tags limit:3 %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <a href="{{ post.url | relative_url }}" class="read-more">Read Full Analysis →</a>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="no-posts">No research posts yet. Check back soon!</p>
+        {% endif %}
+    </section>
+
+    {{ content }}
+</div>

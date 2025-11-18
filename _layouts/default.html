@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    {% feed_meta %}
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="site-branding">
+                        <a href="{{ '/' | relative_url }}" class="site-title">
+                            <span class="title-bracket">[</span>
+                            <span class="title-text">{{ site.title }}</span>
+                            <span class="title-bracket">]</span>
+                        </a>
+                        <p class="site-description">{{ site.description }}</p>
+                    </div>
+                    <nav class="site-nav">
+                        <a href="{{ '/' | relative_url }}" class="nav-link">Research</a>
+                        <a href="{{ '/about' | relative_url }}" class="nav-link">About</a>
+                        <a href="{{ '/archive' | relative_url }}" class="nav-link">Archive</a>
+                        <a href="https://github.com/{{ site.github_username }}" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <div class="container">
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-text">
+                        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}.
+                        All research is for educational purposes.
+                    </p>
+                    <p class="footer-links">
+                        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+                        <span class="separator">|</span>
+                        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+                        <span class="separator">|</span>
+                        <a href="mailto:{{ site.email }}">Contact</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

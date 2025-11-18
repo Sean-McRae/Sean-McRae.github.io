@@ -1,0 +1,24 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#0a0e17"/>
+
+  <!-- Terminal bracket left -->
+  <path d="M 50 40 L 50 160 L 55 160 L 55 45 L 80 45 L 80 40 Z" fill="url(#gradient)"/>
+
+  <!-- Terminal bracket right -->
+  <path d="M 150 40 L 150 160 L 145 160 L 145 45 L 120 45 L 120 40 Z" fill="url(#gradient)"/>
+
+  <!-- Lock/Shield icon in center -->
+  <path d="M 100 70 L 85 75 L 85 95 C 85 105 90 115 100 120 C 110 115 115 105 115 95 L 115 75 Z M 100 60 C 95 60 90 65 90 70 L 90 75 L 110 75 L 110 70 C 110 65 105 60 100 60 Z" fill="url(#gradient)"/>
+
+  <!-- Binary code effect -->
+  <text x="100" y="145" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle" opacity="0.6">01010011</text>
+  <text x="100" y="160" font-family="monospace" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.6">01001101</text>
+</svg>
