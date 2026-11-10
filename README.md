@@ -1,16 +1,12 @@
 # Sean-McRae.github.io
 
-Reserved for a new personal GitHub Pages site, replacing the previous
-"Novel Exploits" blog (archived in full on the `archive/novel-exploits-blog`
-branch — nothing was lost, it's just no longer what `main` serves).
+Personal site for Sean McRae, served from `main` via GitHub Pages at
+https://sean-mcrae.github.io/.
 
-The new site will center on launching a public suite of Claude Code
-security report-writing skills, modeled loosely on Matt Pocock's
-install-first, doc-page approach to launching a skill suite.
+Plain HTML/CSS/vanilla JS, no build step, no framework. `index.html` is
+the whole page; `assets/css/style.css` holds the styling (light/dark via
+`prefers-color-scheme`, with a manual override toggle persisted in
+`localStorage`); `assets/js/theme.js` is the toggle's only script.
 
-**Not designed yet.** This repo currently holds only scaffolding — real
-page content, structure, and copy are deliberately deferred until the
-`Sean-McRae-Reporting` skill suite exists and demos cleanly, then get
-their own dedicated brainstorming pass.
-
-`assets/headshot.jpeg` is staged for later use.
+The previous "Novel Exploits" blog is preserved in full on the
+`archive/novel-exploits-blog` branch; `main` no longer serves it.
